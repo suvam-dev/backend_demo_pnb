@@ -1,0 +1,15 @@
+[
+    {
+        "host": "google.com",
+        "tls_version": "TLSv1.3",
+        "cipher_suite": "TLS_AES_256_GCM_SHA384",
+        "certificate_issuer": "((('countryName', 'US'),), (('organizationName', 'Google Trust Services'),), (('commonName', 'WR2'),))",
+        "certificate_expiry": "Apr 27 08:36:37 2026 GMT",
+        "public_key_algorithm": "ECPublicKey",
+        "key_size": 256,
+        "quantum_safe": true,
+        "t2qb_risk_level": "MEDIUM",
+        "actionable_remediation": "",
+        "w3c_credential_jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkaWQ6d2ViOnBuYi1oYWNrYXRob24uY29tIiwic3ViIjoiZ29vZ2xlLmNvbSIsIm5iZiI6MTc3MzU5MzI1MC4xMTM1NywiZXhwIjoxNzgxMzY5MjUwLjExMzU5MywidmMiOnsidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIlF1YW50dW1SZWFkeUNlcnRpZmljYXRlIl0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7ImlkIjoiZ29vZ2xlLmNvbSIsImF1ZGl0U3RhdHVzIjoiVmVyaWZpZWQgUXVhbnR1bSBTYWZlIiwiY2lwaGVyU3VpdGUiOiJUTFNfQUVTXzI1Nl9HQ01fU0hBMzg0In19fQ.xBGCLzo3g3ZREkZCT5BZ1Q5gwmADQm6JYW6vxkImBLY"
+    }
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum TLS Security Scanner</title>
+    <link rel="stylesheet" href="styel.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🔐 Quantum TLS Security Scanner</h1>
+        <p>Analyze website security and quantum-readiness</p>
+    </div>
+
+    <div class="main-container">
+        <div class="scanner-section">
+            <form class="scan-form" onsubmit="scan(event)">
+                <input 
+                    id="site" 
+                    type="text" 
+                    placeholder="Enter website (e.g., google.com)" 
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" id="scanBtn">Scan Now</button>
+            </form>
+            <div id="result"></div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h3>📜 Scan History</h3>
+                <button class="clear-history" onclick="clearHistory()" id="clearBtn">Clear All</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="empty-history">No scans yet. Start by scanning a website!</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

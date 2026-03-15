@@ -1,0 +1,28 @@
+[
+    {
+        "host": "google.com",
+        "tls_version": "TLSv1.3",
+        "cipher_suite": "TLS_AES_256_GCM_SHA384",
+        "certificate_issuer": "((('countryName', 'US'),), (('organizationName', 'Google Trust Services'),), (('commonName', 'WR2'),))",
+        "certificate_expiry": "Apr 27 08:36:37 2026 GMT",
+        "public_key_algorithm": "ECPublicKey",
+        "key_size": 256,
+        "quantum_safe": true,
+        "t2qb_risk_level": "MEDIUM",
+        "actionable_remediation": "",
+        "w3c_credential_jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkaWQ6d2ViOnBuYi1oYWNrYXRob24uY29tIiwic3ViIjoiZ29vZ2xlLmNvbSIsIm5iZiI6MTc3MzU2NjM4Ni4yNzQ3MjcsImV4cCI6MTc4MTM0MjM4Ni4yNzQ4MDcsInZjIjp7InR5cGUiOlsiVmVyaWZpYWJsZUNyZWRlbnRpYWwiLCJRdWFudHVtUmVhZHlDZXJ0aWZpY2F0ZSJdLCJjcmVkZW50aWFsU3ViamVjdCI6eyJpZCI6Imdvb2dsZS5jb20iLCJhdWRpdFN0YXR1cyI6IlZlcmlmaWVkIFF1YW50dW0gU2FmZSIsImNpcGhlclN1aXRlIjoiVExTX0FFU18yNTZfR0NNX1NIQTM4NCJ9fX0.S8Rc3yPogCWPYqLvfr2Cw7vXQWepwPuOgD-oDdZhgs0"
+    },
+    {
+        "host": "flipkart.com",
+        "tls_version": "TLSv1.3",
+        "cipher_suite": "TLS_AES_256_GCM_SHA384",
+        "certificate_issuer": "((('countryName', 'BE'),), (('organizationName', 'GlobalSign nv-sa'),), (('commonName', 'GlobalSign RSA OV SSL CA 2018'),))",
+        "certificate_expiry": "Jul 17 03:39:25 2026 GMT",
+        "public_key_algorithm": "RSAPublicKey",
+        "key_size": 2048,
+        "quantum_safe": false,
+        "t2qb_risk_level": "HIGH",
+        "actionable_remediation": "Update config for flipkart.com:\nssl_protocols TLSv1.3;\nssl_ecdh_curve X25519Kyber768Draft00;\nssl_ciphers TLS_AES_256_GCM_SHA384;",
+        "w3c_credential_jwt": null
+    }
+]
