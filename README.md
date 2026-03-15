@@ -6,69 +6,114 @@ This project is a full-stack application that scans target web servers for crypt
 
 - `backend/`: A Django-based backend API handling the TLS scanning logic.
 - `frontend/`: A modern HTML/CSS/JS frontend user interface for running scans.
-- `venv/`: The Python virtual environment setup for this project.
+- `requirements.txt`: Python package dependencies.
 
 ## Prerequisites
 
 - **Python 3.8+** installed on your system.
 - A modern web browser.
 
-## How to Run the Application
+---
 
-### 1. Start the Backend API
+## 🛠 How to Run the Application
 
-The frontend relies on the backend running on **port 9000**. To start the backend, open a terminal and follow these steps:
+This guide covers setup and execution for both **Mac/Linux** and **Windows** operating systems.
 
-1. **Navigate to the root directory:**
-   ```bash
-   cd /Users/suvanghosh/backend_demo_pnb
-   ```
+### 1. Setup the Python Virtual Environment & Dependencies
 
-2. **Activate the Virtual Environment:**
-   ```bash
-   source venv/bin/activate
-   ```
-   *(If you encounter missing module errors later, you can ensure requirements are installed by running: `pip install django cryptography PyJWT` inside the active environment).*
+Before running the backend, you need to set up the virtual environment to ensure all cryptography libraries are isolated.
 
-3. **Navigate to the Backend directory:**
-   ```bash
-   cd backend
-   ```
+**For Mac/Linux:**
+```bash
+# Navigate to the project root
+cd path/to/backend_demo_pnb
 
-4. **Run the Django Development Server:**
-   Start the server explicitly on port 9000 so the frontend can reach it:
-   ```bash
-   python manage.py runserver 9000
-   ```
-   Leave this terminal open and running.
+# Create the virtual environment
+python3 -m venv venv
 
-### 2. Launch the Frontend UI
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+**For Windows:**
+```powershell
+# Navigate to the project root
+cd path\to\backend_demo_pnb
+
+# Create the virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 2. Start the Backend API
+
+The frontend relies on the backend API running locally on **port 9000**. Guarantee that your virtual environment is activated before proceeding.
+
+**For Mac/Linux:**
+```bash
+cd backend
+python3 manage.py runserver 9000
+```
+
+**For Windows:**
+```powershell
+cd backend
+python manage.py runserver 9000
+```
+
+> **Note:** Leave this terminal window open and running in the background.
+
+### 3. Launch the Frontend UI
 
 Since the frontend consists of static files without a build step, it is extremely easy to use:
 
-1. **Open the HTML File:**
-   Open a new terminal window (or just use Finder) and open `index.html` in your web browser:
-   ```bash
-   open /Users/suvanghosh/backend_demo_pnb/frontend/index.html
-   ```
+1. Open a **new terminal window** or use your file explorer (Finder/Windows Explorer).
+2. Locate the `index.html` file inside the `frontend/` directory.
+3. Open it in any modern web browser.
 
-2. **Run a Scan:**
-   - Enter a target domain (e.g., `google.com`) in the input field.
-   - Click **"Scan Now"**.
-   - The page will communicate with your local backend API and display a comprehensive report, including the T2QB risk level, actionable remediation steps, and potential W3C Verifiable Credentials.
+**Quick commands to open from terminal:**
 
-### 3. Alternative: Running CLI Mode
+**Mac:**
+```bash
+open ../frontend/index.html
+```
+**Windows:**
+```powershell
+start ..\frontend\index.html
+```
+*(Or simply double-click `index.html` in your file explorer)*
+
+**Running a Scan:**
+- Enter a target domain (e.g., `google.com`) in the input field.
+- Click **"Scan Now"**.
+- The page will communicate with your local backend API and display a comprehensive layout, including the T2QB risk level, actionable remediation steps, and potential W3C Verifiable Credentials.
+
+---
+
+### 🚀 Alternative: Running in Command Line (CLI) Mode
 
 If you prefer to run scans directly from the command line without spinning up the Django server or using the UI frontend:
 
-1. Activate your virtual environment and navigate to the `api` directory:
-   ```bash
-   cd /Users/suvanghosh/backend_demo_pnb/backend/api
-   ```
-   
-2. Execute the scanner module directly with a target domain:
-   ```bash
-   python scanner.py google.com
-   ```
-   
-This will execute the scan logic, print results to your console, and automatically dump a `cbom_report.json` file in your active directory.
+**For Mac/Linux:**
+```bash
+# Ensure virtual environment is activated
+cd path/to/backend_demo_pnb/backend/api
+python3 scanner.py google.com
+```
+
+**For Windows:**
+```powershell
+# Ensure virtual environment is activated
+cd path\to\backend_demo_pnb\backend\api
+python scanner.py google.com
+```
+
+This will execute the scan logic, print results directly to your terminal console, and automatically dump a `cbom_report.json` file in your active directory.
